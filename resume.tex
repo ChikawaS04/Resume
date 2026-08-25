@@ -1,0 +1,164 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Margins
+\addtolength{\oddsidemargin}{-0.75in}
+\addtolength{\evensidemargin}{-0.75in}
+\addtolength{\textwidth}{1.5in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.5in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting - bold section titles
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\bfseries\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.99\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=3pt, parsep=0pt, topsep=3pt, partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape David Davidson} \\ \vspace{1pt}
+    \small ddavidson644@gmail.com $|$ +1-365-880-6534 $|$ Toronto, ON, Canada \\ \vspace{1pt}
+    \href{https://github.com/ChikawaS04}{\underline{github.com/ChikawaS04}} $|$
+    \href{https://www.linkedin.com/in/david-davidson-0363a3247/}{\underline{linkedin.com/in/david-davidson-0363a3247}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Niagara College}{Welland, ON}
+      {Advanced Diploma, Computer Programming \& Analysis (Co-op)}{Jan 2023 to April 2025}
+      \resumeItemListStart
+        \resumeItem{\textbf{Relevant Coursework:} Data Structures \& Algorithms, Object-Oriented Programming, Operating Systems, Database Systems}
+        \resumeItem{\textbf{External Studies:} Fixed income markets, Rates \& Credit products (Bonds, CDS, IRS, SOFR, EURIBOR), Derivative pricing (Options, Futures)}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages:} Java(8, 11, 25), C++(20, 23), C\#, Python, TypeScript, SQL \\
+     \textbf{Frameworks:} Spring Boot, Hibernate/JPA, ASP.NET Core, gRPC, REST, WebSocket \\
+     \textbf{Developer Tools \& Databases:} Git/GitHub, Maven, Kafka, PostgreSQL, MongoDB, JUnit, Mockito, Postman \\
+     \textbf{Cloud \& DevOps:} AWS (EC2, S3, IAM, ELB), Docker, Kubernetes
+    }}
+ \end{itemize}
+
+%-----------WORK EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer}{September 2024 to Present}
+      {Eastside Creations}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Built and maintained purchase management APIs in \textbf{Java} and \textbf{Spring Boot}, sustaining 100+ concurrent requests at sub-250ms latency.}
+        \resumeItem{Profiled \textbf{JVM} performance issues in production, using heap and thread analysis to isolate contention and slow code paths.}
+        \resumeItem{Refactored \textbf{Kafka Streams} to centralize transaction logs, enabling real-time audit reporting across microservices.}
+        \resumeItem{Deployed backend services on \textbf{AWS EC2} and \textbf{S3}, configuring load balancers to maintain stable uptime for customer-facing APIs.}
+        \resumeItem{Modelled relational schemas and tuned queries for transactional workloads, reducing redundant database round-trips and improving response times.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Developer}{January 2024 to April 2024}
+      {Natural by Design}{Welland, ON}
+      \resumeItemListStart
+        \resumeItem{Implemented \textbf{Entity Framework Core} with an ORM-based data layer, managing table schemas for client and project data.}
+        \resumeItem{Designed REST API endpoints in \textbf{ASP.NET Core} for account management operations, handling 200+ daily requests.}
+        \resumeItem{Collaborated in Agile sprints, client presentations, and technical documentation to support software development and client delivery.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{Bond Pricing Engine} $|$ \emph{Java 25, Concurrency, GC Tuning, gRPC, Fixed Income}}{}
+          \resumeItemListStart
+            \resumeItem{Built a multithreaded pricing engine calculating dirty and clean prices, accrued interest, and YTM using a \textbf{Newton-Raphson solver}.}
+            \resumeItem{Derived \textbf{Macaulay duration}, \textbf{modified duration}, and \textbf{DV01} from the pricing, reusing cashflows and discount factors so each bond is valued once.}
+            \resumeItem{Configured \textbf{ZGC} heap sizing and GC logging to minimize pause times, achieving sub-50ms latency across bulk pricing runs.}
+            \resumeItem{Architected a \textbf{gRPC} layer exposing pricing and sensitivity analytics through unary and server-streaming RPCs with \textbf{Protocol Buffers}.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Order Management System} $|$ \emph{Java 25, LMAX Disruptor, QuickFIX/J, Low-Latency Architecture}}{}
+          \resumeItemListStart
+            \resumeItem{Architected a low-latency Order Management System for a limit order book, with a \textbf{lock-free} design on the critical path.}
+            \resumeItem{Built a \textbf{price-time priority matching engine} with \textbf{TreeMap}-backed order books, supporting partial fills and O(1) cancels.}
+            \resumeItem{Designed an event-driven pipeline using the \textbf{Disruptor pattern} with pre-allocated \textbf{ring buffers} to eliminate GC pressure on the hot path.}
+            \resumeItem{Integrated a \textbf{FIX engine} for order entry, with an \textbf{Order Gateway} parsing tag-value pairs and publishing events to the ring buffer.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Document Processing Software} $|$ \emph{Java 21, Spring Boot, React, PostgreSQL, Python, Docker}}{}
+          \resumeItemListStart
+            \resumeItem{Engineered a full-stack application processing 50+ legal documents with cloud storage, reducing review time by $\sim$75\%.}
+            \resumeItem{Developed a \textbf{Python} NLP microservice using \textbf{GPT-4} to extract entities and generate summaries from legal documents.}
+            \resumeItem{Created a \textbf{React} frontend with \textbf{Vite} and \textbf{Tailwind} to display AI-generated summaries, document data and extracted fields.}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+\end{document}

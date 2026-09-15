@@ -97,8 +97,8 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Languages:} Java(8, 11, 25), C++(20, 23), C\#, Python, TypeScript, SQL \\
-     \textbf{Frameworks:} Spring Boot, Hibernate/JPA, ASP.NET Core, gRPC, REST, WebSocket \\
-     \textbf{Developer Tools \& Databases:} Git/GitHub, Maven, Kafka, PostgreSQL, MongoDB, JUnit, Mockito, Postman \\
+     \textbf{Frameworks:} Spring Boot, Hibernate/JPA, React, ASP.NET Core, gRPC, REST, WebSocket \\
+     \textbf{Developer Tools \& Databases:} Git/GitHub, Maven, IntelliJ, Kafka, PostgreSQL, MongoDB, JUnit, Mockito, Postman \\
      \textbf{Cloud \& DevOps:} AWS (EC2, S3, IAM, ELB), Docker, Kubernetes
     }}
  \end{itemize}
@@ -143,12 +143,13 @@
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{Order Management System} $|$ \emph{Java 25, LMAX Disruptor, QuickFIX/J, Low-Latency Architecture}}{}
+          {\textbf{Order Management System} $|$ \emph{Java 25, LMAX Disruptor, Netty, FIX, Low-Latency Architecture}}{}
           \resumeItemListStart
-            \resumeItem{Architected a low-latency Order Management System for a limit order book, with a \textbf{lock-free} design on the critical path.}
-            \resumeItem{Built a \textbf{price-time priority matching engine} with \textbf{TreeMap}-backed order books, supporting partial fills and O(1) cancels.}
-            \resumeItem{Designed an event-driven pipeline using the \textbf{Disruptor pattern} with pre-allocated \textbf{ring buffers} to eliminate GC pressure on the hot path.}
-            \resumeItem{Integrated a \textbf{FIX engine} for order entry, with an \textbf{Order Gateway} parsing tag-value pairs and publishing events to the ring buffer.}
+            \resumeItem{Built a \textbf{price-time priority matching engine} over \textbf{TreeMap}-backed order books, supporting partial fills and O(1) cancels.}
+            \resumeItem{Designed an event-driven pipeline on \textbf{LMAX Disruptor} ring buffers with a \textbf{zero-allocation hot path}, benchmarked at \textbf{8.2M orders/sec} via \textbf{JMH}.}
+            \resumeItem{Engineered a hand-rolled \textbf{FIX} gateway parsing tag-value pairs (NewOrderSingle, OrderCancelRequest) and publishing orders onto the inbound ring buffer.}
+            \resumeItem{Streamed live market data over a \textbf{Netty WebSocket} server to a \textbf{React} UI with a real-time depth ladder and trade tape.}
+            \resumeItem{Building a pluggable strategy interface for \textbf{algorithmic trading agents} to connect to the book and submit orders programmatically, modeled on broker-style agent integration.}
           \resumeItemListEnd
 
       \resumeProjectHeading

@@ -143,13 +143,12 @@
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{Order Management System} $|$ \emph{Java 25, LMAX Disruptor, Netty, FIX, Low-Latency Architecture}}{}
+          {\textbf{Low-latency Exchange Matching Engine} $|$ \emph{Java 25, LMAX Disruptor, Netty, FIX, React}}{}
           \resumeItemListStart
             \resumeItem{Built a \textbf{price-time priority matching engine} over \textbf{TreeMap}-backed order books, supporting partial fills and O(1) cancels.}
-            \resumeItem{Designed an event-driven pipeline on \textbf{LMAX Disruptor} ring buffers with a \textbf{zero-allocation hot path}, benchmarked at \textbf{8.2M orders/sec} via \textbf{JMH}.}
-            \resumeItem{Engineered a hand-rolled \textbf{FIX} gateway parsing tag-value pairs (NewOrderSingle, OrderCancelRequest) and publishing orders onto the inbound ring buffer.}
-            \resumeItem{Streamed live market data over a \textbf{Netty WebSocket} server to a \textbf{React} UI with a real-time depth ladder and trade tape.}
-            \resumeItem{Building a pluggable strategy interface for \textbf{algorithmic trading agents} to connect to the book and submit orders programmatically, modeled on broker-style agent integration.}
+            \resumeItem{Designed a lock-free, \textbf{single-writer} pipeline on \textbf{LMAX Disruptor} ring buffers with a \textbf{zero-allocation hot path}, sustaining \textbf{8.2M orders/sec} under \textbf{JMH}.}
+            \resumeItem{Implemented a \textbf{FIX 4.2} gateway parsing tag-value messages (NewOrderSingle, OrderCancelRequest) onto the inbound ring buffer.}
+            \resumeItem{Streamed executions and \textbf{L2} depth over a \textbf{Netty WebSocket} server to a \textbf{React} terminal, and profiled full-pipeline latency at \textbf{p50 4.8$\mu$s / p99 9.5$\mu$s}.}
           \resumeItemListEnd
 
       \resumeProjectHeading
